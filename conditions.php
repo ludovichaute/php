@@ -167,7 +167,7 @@ if ($chambre_est_sale == true){
         echo($msg1);
 
 
-        echo('<p>' .$text. '</p><p>Ta note est de : <strong>'.$note.' sur 20. </strong>'.$msg_note.'</p>');
+        echo("<p>$text</p><p>Ta note est de : <strong>$note sur 20. </strong>$msg_note</p>");
         
     } else {
         echo('<h4> Veuillez remplir le formulaire!</h4>');
