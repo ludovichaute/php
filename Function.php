@@ -44,9 +44,19 @@ $date = date('H\hi\:s');
     <form method="post">
     <label for="">Nom</label>
     <input type="text" name="name">
+    <br>
     <label for="">Somme:</label>
     <input type="text" name="somA">
     <input type="text" name="somB">
+    <br>
+    <label for="">Volume du cône:</label>
+    <br>
+    <label for="">Rayon:</label>
+    <input type="text" name="rayon">
+    <label for="">Hauteur:</label>
+    <input type="text" name="hauteur">
+    <br>
+    <button type="submit">Submit</button>
     </form>
 
     <?php
@@ -71,6 +81,26 @@ $date = date('H\hi\:s');
         echo str_replace('æ', 'ae', $mot);
        }
     replaceWordsRev($mot1);
+
+
+    echo "<h3>En minuscule:</h3>";
+    $stringUpper = "ARRÊTE DE CRIER JE N'ENTENDS PLUS RIEN!!!";
+
+    echo mb_strtolower($stringUpper);
+
+    echo "<h3>Volume d'un cône:</h3>";
+       if (isset($_POST['rayon']) AND isset($_POST['hauteur'])) {
+           $ray = $_POST['rayon'];
+           $haut = $_POST['hauteur'];
+            function volumeCone($rayon, $hauteur){
+                $volume = $rayon * $rayon * 3.14 * $hauteur *(1/3);
+                echo 'Le volume du cône de rayon '.$rayon.' et de hauteur '.$hauteur.' est : ' . $volume . ' cm<sup>3</sup><br />';  
+            }
+
+            volumeCone($ray, $haut);
+       }
+       $volume = 5 * 5 * 3.14 * 2 * (1/3);  
+
     ?>
 </body>
 </html>
