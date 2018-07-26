@@ -74,11 +74,12 @@ echo "<h3>10 Pays du monde:</h3>";
     'AU'=> "Australie",
     'HA'=> "Hawai" );
 
+    
   foreach ($pays as $key => $value) {
     echo '<option value='.$key.'>'.$value.'</option>';
     
   }
-  
+
   ?>
 </select>
     <script>
@@ -89,5 +90,13 @@ echo "<h3>10 Pays du monde:</h3>";
     
     
     </script>
+    <?php
+    echo "<h1>test</h1>";
+    
+
+?>
+
+
 </body>
+
 </html>
